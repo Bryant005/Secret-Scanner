@@ -26,11 +26,11 @@ python secret_scanner.py -t ./config.json
 Verbose Mode (See files being scanned):
 
 Bash
-python secret_scanner.py --target ./my_project_folder --verbose
+`python secret_scanner.py --target ./my_project_folder --verbose`
 Viewing Help Menu:
 
 Bash
-python secret_scanner.py --help
+`python secret_scanner.py --help`
 Limitations & False Positives
 False Positives: The generic password regex might catch placeholder strings (e.g., password = "ENTER_PASSWORD_HERE").
 
