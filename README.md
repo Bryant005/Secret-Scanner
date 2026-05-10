@@ -35,3 +35,6 @@ False Positives: The generic password regex might catch placeholder strings (e.g
 False Negatives: The tool relies on pattern matching. If a developer uses a custom API key format, adds words between the variable and the equals sign, or obfuscates a token in a complex way (e.g., base64 encoding), the scanner will not detect it.
 
 Performance: Very large binary files (like compiled .exe or .pdf files) are automatically skipped via UnicodeDecodeError handling to prevent memory crashes, but scanning massive directories may take time.
+```
+## Youtube Video Showing The Code Being Prompted
+https://youtu.be/HjeCyZUbfkw
