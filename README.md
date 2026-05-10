@@ -1,4 +1,3 @@
-# Secret-Scanner
 # Python Secret Scanner
 
 ## Purpose
@@ -19,21 +18,20 @@ This tool reads files line-by-line and evaluates the text against a set of prede
 The tool requires Python 3.x and relies entirely on standard libraries (no `pip install` required).
 
 **Basic Scan (Directory or File):**
-``bash
+```bash
 python secret_scanner.py --target ./my_project_folder
 python secret_scanner.py -t ./config.json
-
 Verbose Mode (See files being scanned):
 
 Bash
-`python secret_scanner.py --target ./my_project_folder --verbose`
+python secret_scanner.py --target ./my_project_folder --verbose
 Viewing Help Menu:
 
 Bash
-`python secret_scanner.py --help`
+python secret_scanner.py --help
 Limitations & False Positives
 False Positives: The generic password regex might catch placeholder strings (e.g., password = "ENTER_PASSWORD_HERE").
 
-False Negatives: The tool relies on pattern matching. If a developer uses a custom API key format or obfuscates a token in a complex way (e.g., base64 encoding it in chunks), the scanner will not detect it.
+False Negatives: The tool relies on pattern matching. If a developer uses a custom API key format, adds words between the variable and the equals sign, or obfuscates a token in a complex way (e.g., base64 encoding), the scanner will not detect it.
 
 Performance: Very large binary files (like compiled .exe or .pdf files) are automatically skipped via UnicodeDecodeError handling to prevent memory crashes, but scanning massive directories may take time.
